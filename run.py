@@ -22,7 +22,7 @@ app_mode = st.sidebar.selectbox('Select Page',['Home','Prediction'])
 if app_mode=='Home':
     st.title('LOAN PREDICTION :')
     st.image('hipster_loan-1.jpg') 
-    st.write('App realised by : Nadia Mhadhbi') 
+    
    
    
    
