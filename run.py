@@ -98,7 +98,7 @@ elif app_mode =='Prediction':
         file.close()
    
    
-        loaded_model = joblib.load(open('Random_Forest.sav', 'rb'))
+        loaded_model = pickle.load(open('Random_Forest.sav', 'rb'))
         prediction = loaded_model.predict(single_sample)
         if prediction[0] == 0 :
             st.error(
