@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import base64
-
+import joblib
 
 
 @st.cache(suppress_st_warning=True)
@@ -98,7 +98,7 @@ elif app_mode =='Prediction':
         file.close()
    
    
-        loaded_model = pickle.load(open('Random_Forest.sav', 'rb'))
+        loaded_model = joblib.load(open('Random_Forest.sav', 'rb'))
         prediction = loaded_model.predict(single_sample)
         if prediction[0] == 0 :
             st.error(
