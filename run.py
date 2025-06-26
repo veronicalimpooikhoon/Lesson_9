@@ -100,6 +100,8 @@ elif app_mode =='Prediction':
    
         loaded_model = pickle.load(open('Random_Forest.sav', 'rb'))
         prediction = loaded_model.predict(single_sample)
+        #with open("Random_Forest.sav", "rb") as model_file:
+        #model = pickle.load(model_file)
         if prediction[0] == 0 :
             st.error(
     'According to our Calculations, you will not get the loan from Bank'
